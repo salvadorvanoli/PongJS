@@ -1,0 +1,58 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 4em 1fr;
+    background-color: black;
+    color: white;
+    font-family: 'Press Start 2P', monospace;
+}
+
+canvas {
+    border: solid 1px;
+    border: 5px solid white;
+    box-shadow: 0 0 20px white;
+}
+
+.paleta {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+}
+
+.paleta.azul {
+    background-color: rgba(0, 0, 255);
+    right: 50px;
+    top: calc(50% - 50px);
+}
+
+.paleta.roja {
+    background-color: rgba(255, 0, 0);
+    left: 50px;
+    top: calc(50% - 50px);
+}
+
+.linea-central {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background: repeating-linear-gradient(
+        to bottom,
+        white 0,
+        white 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
