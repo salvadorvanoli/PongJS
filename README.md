@@ -5,3 +5,7 @@ Proyecto universitario donde creo el videojuego PONG utilizando únicamente HTML
 ## Cómo ejecutar
 
 Para iniciar una partida se puede acceder al pages del repositorio o descargar el código y ejecutar el index.html. ¡Disfrute!
+
+## Previsualización
+
+![Captura del juego](img/PongScreenshot.png)
