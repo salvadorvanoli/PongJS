@@ -254,9 +254,15 @@ function drawMenu() {
     ctx.fillText('PONG', WIDTH / 2, HEIGHT / 4);
 
     ctx.font = '30px sans-serif';
-    ctx.fillText('1. Jugar contra otro jugador', WIDTH / 2, HEIGHT / 2 - 60);
-    ctx.fillText('2. Jugar contra la computadora (Normal)', WIDTH / 2, HEIGHT / 2 - 10);
-    ctx.fillText('3. Jugar contra la computadora (Imposible)', WIDTH / 2, HEIGHT / 2 + 40);
+    ctx.fillText('Jugar contra otro jugador', WIDTH / 2, HEIGHT / 2 - 60);
+    ctx.fillText('Jugar contra la computadora (Normal)', WIDTH / 2, HEIGHT / 2 - 10);
+    ctx.fillText('Jugar contra la computadora (Imposible)', WIDTH / 2, HEIGHT / 2 + 40);
+    
+    ctx.fillText('(Para elegir una opción usa el ratón)', WIDTH / 2, HEIGHT / 2 + 150);
+
+    ctx.fillStyle = 'gray';
+    ctx.fillText('Controles: WASD Jugador 1 (Rojo)', WIDTH / 2, HEIGHT / 2 + 200);
+    ctx.fillText('Flechas Jugador 2 (Azul)', WIDTH / 2 + 80, HEIGHT / 2 + 240);
 }
 
 canvas.addEventListener('click', (e) => {
@@ -266,9 +272,9 @@ canvas.addEventListener('click', (e) => {
         const y = e.clientY - rect.top;
 
         // Detectar clic en las opciones
-        const textWidth1 = ctx.measureText('1. Jugar contra otro jugador').width;
-        const textWidth2 = ctx.measureText('2. Jugar contra la computadora (Normal)').width;
-        const textWidth3 = ctx.measureText('3. Jugar contra la computadora (Imposible)').width;
+        const textWidth1 = ctx.measureText('Jugar contra otro jugador').width;
+        const textWidth2 = ctx.measureText('Jugar contra la computadora (Normal)').width;
+        const textWidth3 = ctx.measureText('Jugar contra la computadora (Imposible)').width;
 
         // Jugador humano
         if (y >= HEIGHT / 2 - 80 && y <= HEIGHT / 2 - 40 &&
@@ -303,7 +309,7 @@ function drawVictory() {
     ctx.fillStyle = 'white';
     ctx.font = '40px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('¡Victoria!', WIDTH / 2, HEIGHT / 2 - 40);
+    ctx.fillText('¡Fin del juego!', WIDTH / 2, HEIGHT / 2 - 40);
     ctx.font = '30px sans-serif';
     ctx.fillText(`${winner} gana`, WIDTH / 2, HEIGHT / 2);
     ctx.fillText('Haz clic para volver al menú', WIDTH / 2, HEIGHT / 2 + 40);
